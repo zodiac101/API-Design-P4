@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package models.book;
+
+
+enum Genre {
+    UNKNOWN = 0;
+    ACTION = 1;
+    ADVENTURE = 2;
+    COMEDY = 3;
+    DRAMA = 4;
+    FANTASY = 5;
+    HORROR = 6;
+    ROMANCE = 7;
+    THRILLER = 8;
+}
+
+/**
+ * Book model
+ */
+message Book {
+    string ISBN = 1;
+    optional string title = 2;
+    optional string author = 3;
+    optional Genre genre = 4;
+    optional int32 year = 5;
+}
+
+
+

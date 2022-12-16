@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+import "book.proto";
+import "status.proto";
+
+package services.inventory_service;
+
+/**
+  * The service that defines the InventoryService API.
+ */
+service InventoryService {
+  /**
+    * Creates a new book
+   */
+  rpc CreateBook(CreateBookRequest) returns (CreateBookResponse) {};
+
+  /**
+    * Returns the book with the given ID.
+   */
+  rpc GetBook(GetBookRequest) returns (GetBookResponse) {};
+}
+
+/**
+  * The request message for the CreateBook method.
+ */
+message CreateBookRequest {
+  models.book.Book book = 1;
+}
+
+
+/**
+  * The response message for the CreateBook method.
+ */
+message CreateBookResponse {
+  google.rpc.ResponseStatus response_status = 1;
+}
+
+/**
+  * The request message for the GetBook method.
+ */
+message GetBookRequest {
+  string ISBN = 1;
+}
+
+/**
+
+ */
+message GetBookResponse {
+  google.rpc.ResponseStatus response_status = 1;
+  models.book.Book book = 2;
+}
