@@ -5,7 +5,7 @@ import "book.proto";
 package models.inventory_item;
 
 /**
-  Status of the item in the inventory (ENUM).
+ * Status of the item in the inventory (ENUM).
  */
 enum Status {
     AVAILABLE = 0;
@@ -13,7 +13,7 @@ enum Status {
 }
 
 /**
-  Model of Inventory item (MESSAGE).
+ *Model of Inventory item (MESSAGE).
  */
 message InventoryItem {
   int32 inventory_id = 1;

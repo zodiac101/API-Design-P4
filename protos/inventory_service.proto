@@ -6,22 +6,22 @@ import "status.proto";
 package services.inventory_service;
 
 /**
-  * The service that defines the InventoryService API.
+ * The service that defines the InventoryService API.
  */
 service InventoryService {
   /**
-    * Creates a new book
+   * Creates a new book
    */
   rpc CreateBook(CreateBookRequest) returns (CreateBookResponse) {};
 
   /**
-    * Returns the book with the given ID.
+   * Returns the book with the given ID.
    */
   rpc GetBook(GetBookRequest) returns (GetBookResponse) {};
 }
 
 /**
-  * The request message for the CreateBook method.
+ * The request message for the CreateBook method.
  */
 message CreateBookRequest {
   models.book.Book book = 1;
@@ -29,21 +29,21 @@ message CreateBookRequest {
 
 
 /**
-  * The response message for the CreateBook method.
+ * The response message for the CreateBook method.
  */
 message CreateBookResponse {
   google.rpc.ResponseStatus response_status = 1;
 }
 
 /**
-  * The request message for the GetBook method.
+ * The request message for the GetBook method.
  */
 message GetBookRequest {
   string ISBN = 1;
 }
 
 /**
-
+ * The response message for the GetBook method.
  */
 message GetBookResponse {
   google.rpc.ResponseStatus response_status = 1;

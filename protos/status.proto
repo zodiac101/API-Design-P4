@@ -3,7 +3,6 @@ syntax = "proto3";
 import "google/protobuf/any.proto";
 
 package google.rpc;
-// [#protodoc-title: Status]
 // Copied verbatim from https://github.com/grpc/grpc/blob/master/doc/statuscodes.md and slides
 // The `Status` type defines a logical error model that is suitable for
 // different programming environments, including REST APIs and RPC APIs.

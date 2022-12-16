@@ -2,7 +2,9 @@ syntax = "proto3";
 
 package models.book;
 
-
+/**
+ * Genre list of the book (ENUM)
+ */
 enum Genre {
     UNKNOWN = 0;
     ACTION = 1;

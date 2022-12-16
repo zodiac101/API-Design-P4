@@ -8,6 +8,7 @@ class InventoryClient:
     """
     Client code for the inventory server.
     """
+
     def __init__(self, host, port):
         """
         Initialize the client object.
@@ -76,4 +77,3 @@ class InventoryClient:
                 return False, response.response_status.message
         except Exception as e:
             return False, str(e)
-
